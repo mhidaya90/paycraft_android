@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dp20"
+    android:paddingEnd="@dimen/dp20"
+    tools:context=".card.preferences.PreferencesActivity">
+
+    <TextView
+        android:id="@+id/autoTopUpCardTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/semi_bold"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="Auto TopUp Card"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16"
+        app:drawableEndCompat="@drawable/ic_right_arrow"
+        app:drawableStartCompat="@drawable/ic_profile_place_holder" />
+
+    <View
+        android:id="@+id/autoTopUpCardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/addOnCardTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/semi_bold"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="Add on Card"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16"
+        app:drawableEndCompat="@drawable/ic_right_arrow"
+        app:drawableStartCompat="@drawable/ic_profile_place_holder" />
+
+    <View
+        android:id="@+id/addOnCardView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9"
+        android:visibility="gone" />
+</LinearLayout>

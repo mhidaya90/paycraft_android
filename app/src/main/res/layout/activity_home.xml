@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".home.HomeActivity">
+
+        <include layout="@layout/layout_guidelines" />
+
+        <TextView
+            android:id="@+id/helloTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp20"
+            android:fontFamily="@font/regular"
+            android:text="Hello, "
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userNameTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/bold"
+            android:singleLine="true"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp24"
+            app:layout_constraintBottom_toBottomOf="@+id/helloTv"
+            app:layout_constraintEnd_toStartOf="@+id/notificationsIv"
+            app:layout_constraintStart_toEndOf="@+id/helloTv"
+            app:layout_constraintTop_toTopOf="@+id/helloTv"
+            tools:text="Jenny" />
+
+        <TextView
+            android:id="@+id/companyNameTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:textColor="@color/black33"
+            app:layout_constraintEnd_toEndOf="@+id/notificationsIv"
+            app:layout_constraintStart_toStartOf="@+id/helloTv"
+            app:layout_constraintTop_toBottomOf="@+id/helloTv"
+            tools:text="Company Name here" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:text="!"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp24"
+            app:layout_constraintBottom_toBottomOf="@+id/userNameTv"
+            app:layout_constraintStart_toEndOf="@+id/userNameTv"
+            app:layout_constraintTop_toTopOf="@+id/userNameTv" />
+
+        <ImageView
+            android:id="@+id/notificationsIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp20"
+            android:onClick="onClick"
+            android:src="@drawable/ic_notification"
+            app:layout_constraintBottom_toBottomOf="@id/userNameTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/userNameTv" />
+
+        <TextView
+            android:id="@+id/notificationCountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_notification_count"
+            android:fontFamily="@font/light"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp2"
+            android:paddingEnd="@dimen/dp2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintBottom_toTopOf="@+id/notificationsIv"
+            app:layout_constraintEnd_toEndOf="@+id/notificationsIv"
+            app:layout_constraintStart_toEndOf="@+id/notificationsIv"
+            app:layout_constraintTop_toTopOf="@+id/notificationsIv"
+            app:layout_constraintWidth_min="@dimen/dp18"
+            tools:text="12+" />
+
+        <ScrollView
+            android:id="@+id/homeCl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingStart="@dimen/dp5"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="@dimen/dp5"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyNameTv"
+            tools:visibility="gone">
+
+            <include
+                android:id="@+id/layoutHomeMain"
+                layout="@layout/layout_home_main" />
+
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/profileLl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/endGl"
+            app:layout_constraintStart_toStartOf="@+id/beginGl"
+            app:layout_constraintTop_toBottomOf="@+id/companyNameTv"
+            tools:visibility="visible">
+
+            <include
+                android:id="@+id/layoutHomeOptions"
+                layout="@layout/layout_home_options" />
+
+        </ScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addCardCv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/black33"
+            app:cardCornerRadius="@dimen/dp26"
+            app:layout_constraintBottom_toTopOf="@+id/addIv"
+            app:layout_constraintEnd_toEndOf="@id/endGl"
+            app:layout_constraintStart_toStartOf="@id/beginGl"
+            app:layout_constraintTop_toBottomOf="@+id/companyNameTv"
+            tools:visibility="gone">
+
+            <include
+                android:id="@+id/layoutHomeBigAddCard"
+                layout="@layout/layout_home_big_add_card" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottomOptionsCv"
+            android:layout_width="@dimen/dp225"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp6"
+            android:layout_marginBottom="@dimen/dp6"
+            app:cardBackgroundColor="@color/black33"
+            app:cardCornerRadius="@dimen/dp30"
+            app:layout_constraintBottom_toBottomOf="@+id/addIv"
+            app:layout_constraintEnd_toEndOf="@+id/addIv"
+            app:layout_constraintStart_toStartOf="@+id/addIv"
+            app:layout_constraintTop_toTopOf="@+id/addIv" />
+
+
+        <ImageView
+            android:id="@+id/addIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp30"
+            android:elevation="@dimen/dp2"
+            android:onClick="onClick"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/endGl"
+            app:layout_constraintStart_toStartOf="@id/beginGl" />
+
+        <ImageView
+            android:id="@+id/homeIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp30"
+            android:elevation="@dimen/dp2"
+            android:onClick="onClick"
+            android:padding="10dp"
+            android:src="@drawable/ic_home"
+            app:layout_constraintBottom_toBottomOf="@+id/addIv"
+            app:layout_constraintEnd_toStartOf="@+id/addIv"
+            app:layout_constraintTop_toTopOf="@+id/addIv" />
+
+        <ImageView
+            android:id="@+id/profileIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp30"
+            android:layout_marginEnd="@dimen/dp30"
+            android:elevation="@dimen/dp2"
+            android:onClick="onClick"
+            android:padding="@dimen/dp8"
+            android:src="@drawable/ic_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/addIv"
+            app:layout_constraintStart_toEndOf="@+id/addIv"
+            app:layout_constraintTop_toTopOf="@+id/addIv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white72">#B8FFFFFF</color>
+    <color name="black32">#323232</color>
+    <color name="black33">#333333</color>
+    <color name="black39">#63333333</color>
+    <color name="black40">#CC1A1A1A</color>
+    <color name="black45">#73333333</color>
+    <color name="black72">#727272</color>
+    <color name="black10">#E6000000</color>
+    <color name="black87">#87000000</color>
+    <color name="orange">#3F858B</color>
+    <color name="orange1">#F3F0EB</color>
+    <color name="cyan">#B2F3DC</color>
+    <color name="cyan1">#E1EFEE</color>
+    <color name="green">#48B553</color>
+    <color name="ash">#C7C7C8</color>
+    <color name="ash1">#EDEDED</color>
+    <color name="ash2">#9E9E9E</color>
+    <color name="ash3">#B1B1B1</color>
+    <color name="ash4">#E4E4E4</color>
+    <color name="ash5">#EDEDEDB3</color>
+    <color name="ash6">#F1F5F9</color>
+    <color name="azureish_white">#DFEFEC</color>
+    <color name="colorFulvous">#fcbf62</color>
+    <color name="colorRed">#f03c3a</color>
+    <color name="colorRedOrange">#FC4B34</color>
+    <color name="colorRedOrangeLite">#1AFC4B34</color>
+    <color name="colorFloralWhite">#FDF9EF</color>
+
+    <color name="recordColorSaved">#707070</color>
+    <color name="recordColorDone">#31AF78</color>
+    <color name="recordColorPending">#F17B17</color>
+    <color name="recordColorRejected">#D72F38</color>
+    <color name="blue">#3560B1</color>
+</resources>

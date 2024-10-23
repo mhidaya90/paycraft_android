@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_home">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:text="@string/welcome_to_paycraft"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp34" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="@string/add_your_pay_craft_prepaid_card"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:src="@drawable/your_card" />
+
+    <TextView
+        android:id="@+id/addCardTv"
+        style="@style/OrangeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp28"
+        android:paddingStart="@dimen/dp40"
+        android:paddingEnd="@dimen/dp40"
+        android:text="@string/add_card" />
+</LinearLayout>

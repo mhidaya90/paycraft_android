@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ems.transactions.create.CreateTransactionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/transactionFieldsLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/flightReservationTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:background="#F4F7FA"
+                        android:drawableEnd="@drawable/ic_right_arrow"
+                        android:fontFamily="@font/regular"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp12"
+                        android:paddingEnd="@dimen/dp20"
+                        android:paddingBottom="@dimen/dp10"
+                        android:text="Flight Reservation"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/hotelReservationTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:background="#F4F7FA"
+                        android:drawableEnd="@drawable/ic_right_arrow"
+                        android:fontFamily="@font/regular"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp12"
+                        android:paddingEnd="@dimen/dp20"
+                        android:paddingBottom="@dimen/dp12"
+                        android:text="Hotel Reservation"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/cabRentalsTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:background="#F4F7FA"
+                        android:drawableEnd="@drawable/ic_right_arrow"
+                        android:fontFamily="@font/regular"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp12"
+                        android:paddingEnd="@dimen/dp20"
+                        android:paddingBottom="@dimen/dp10"
+                        android:text="Cab Rentals"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/othersTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp2"
+                        android:background="#F4F7FA"
+                        android:drawableEnd="@drawable/ic_right_arrow"
+                        android:fontFamily="@font/regular"
+                        android:paddingStart="@dimen/dp20"
+                        android:paddingTop="@dimen/dp12"
+                        android:paddingEnd="@dimen/dp20"
+                        android:paddingBottom="@dimen/dp12"
+                        android:text="Others"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancelTv"
+                style="@style/AshButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cancel_transaction" />
+
+            <TextView
+                android:id="@+id/saveTv"
+                style="@style/OrangeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_weight="1"
+                android:text="@string/save_transaction" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

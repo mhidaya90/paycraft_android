@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lauchCl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black33"
+        tools:context=".home.LaunchActivity">
+
+        <ImageView
+            android:id="@+id/paycraftLogoIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30"
+            android:src="@drawable/dhan_tech_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/infoTitleTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paycraftLogoIv">
+
+            <ImageView
+                android:id="@+id/launchIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/launch_logo_temp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/infoTitleTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp40"
+            android:layout_marginBottom="@dimen/dp20"
+            android:fontFamily="@font/bold"
+            android:text="Manage Business Expenses Anywhere in Real Time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp26"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp40"
+            android:fontFamily="@font/semi_bold"
+            android:text="Say goodbye to crumpled receipts attached to spreadsheets. Now you can scan the receipts on the go"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintBottom_toTopOf="@+id/loginTv"
+            app:layout_constraintEnd_toEndOf="@+id/infoTitleTv"
+            app:layout_constraintStart_toStartOf="@+id/infoTitleTv" />
+
+
+        <TextView
+            android:id="@+id/loginTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp30"
+            android:layout_marginBottom="@dimen/dp40"
+            android:onClick="onClick"
+            android:paddingStart="@dimen/dp50"
+            android:paddingEnd="@dimen/dp50"
+            android:text="@string/login"
+            android:theme="@style/OrangeButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/signUpTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp30"
+            android:fontFamily="@font/semi_bold"
+            android:onClick="onClick"
+            android:padding="@dimen/dp10"
+            android:text="@string/signup"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintBottom_toBottomOf="@+id/loginTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/loginTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

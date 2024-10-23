@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardDetailsCl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/companyNameTv"
+    tools:showIn="@layout/activity_home">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/addCardMiniCv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp8"
+        android:gravity="center_vertical"
+        app:cardBackgroundColor="@color/ash1"
+        app:cardCornerRadius="@dimen/dp20"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/layoutHomeSmallAddCard"
+            layout="@layout/layout_home_small_add_card" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardsCv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/dp20"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCardMiniCv">
+
+        <TextView
+            android:id="@+id/cardsTextTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp8"
+            android:paddingTop="@dimen/dp4"
+            android:paddingEnd="@dimen/dp10"
+            android:paddingBottom="@dimen/dp4"
+            android:text="Cards"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            app:cardCornerRadius="@dimen/dp20"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/viewAllCardsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp20"
+            android:fontFamily="@font/semi_bold"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp10"
+            android:paddingTop="@dimen/dp4"
+            android:paddingBottom="@dimen/dp4"
+            android:text="View All"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/sp14"
+            app:cardCornerRadius="@dimen/dp20"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="@+id/cardsTextTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardsTextTv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cardsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/cardsTextTv"
+            tools:itemCount="10"
+            tools:listitem="@layout/row_home_card" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/expenseManagementCl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardsCv">
+
+        <TextView
+            android:id="@+id/pendingActionsTextTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp8"
+            android:paddingTop="@dimen/dp4"
+            android:paddingEnd="@dimen/dp10"
+            android:paddingBottom="@dimen/dp4"
+            android:text="Pending Actions"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            app:cardCornerRadius="@dimen/dp20"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/unreportedExpensesCv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:cardBackgroundColor="@color/orange1"
+            app:cardCornerRadius="@dimen/dp20"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toStartOf="@+id/unrSubmittedReportsCv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pendingActionsTextTv">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/companyNameTv">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center_horizontal"
+                    android:text="@string/unreported_expenses"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/expenseCountTv"
+                    style="@style/OrangeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/bg_white_button"
+                    android:paddingStart="@dimen/dp20"
+                    android:paddingEnd="@dimen/dp20"
+                    android:text="@string/expenses"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/viewAllExpensesTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/view_expenses"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/unrSubmittedReportsCv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/dp8"
+            android:gravity="center_vertical"
+            app:cardBackgroundColor="@color/cyan1"
+            app:cardCornerRadius="@dimen/dp20"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="@+id/unreportedExpensesCv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/unreportedExpensesCv"
+            app:layout_constraintTop_toTopOf="@+id/unreportedExpensesCv">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/companyNameTv">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center_horizontal"
+                    android:text="@string/unsubmitted_reports"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/reportCountTv"
+                    style="@style/OrangeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/bg_white_button"
+                    android:paddingStart="@dimen/dp20"
+                    android:paddingEnd="@dimen/dp20"
+                    android:text="@string/reports"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/viewAllReportsTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:padding="@dimen/dp10"
+                    android:text="@string/view_reports"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/expenseReportCv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp8"
+            android:minHeight="@dimen/dp150"
+            app:cardBackgroundColor="@color/ash1"
+            app:cardCornerRadius="@dimen/dp20"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unreportedExpensesCv"
+            tools:visibility="visible">
+
+            <include
+                android:id="@+id/layoutHomeExpenseReportTabs"
+                layout="@layout/layout_home_expense_report_tabs" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp100"
+            app:layout_constraintTop_toBottomOf="@+id/expenseReportCv"
+            tools:layout_editor_absoluteX="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

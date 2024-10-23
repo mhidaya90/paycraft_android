@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="filters"
+            type="com.paycraft.ems.transactions.Filters" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp8">
+
+        <TextView
+            android:id="@+id/filterTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:fontFamily="@font/semi_bold"
+            android:text="@{filters.title}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Filter Category" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/filtersRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filterTitleTv"
+            tools:itemCount="5"
+            tools:listitem="@layout/row_selectable_filter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

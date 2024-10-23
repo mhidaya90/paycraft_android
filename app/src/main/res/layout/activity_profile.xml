@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:context=".user.profile.ProfileActivity">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/layout_guidelines" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="@dimen/dp100"
+                    android:layout_marginTop="@dimen/dp20"
+                    app:layout_constraintEnd_toEndOf="@+id/endGl"
+                    app:layout_constraintStart_toStartOf="@+id/beginGl"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/profileIv"
+                    android:layout_width="@dimen/dp95"
+                    android:layout_height="@dimen/dp95"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:background="@drawable/bg_progress_dialog"
+                    app:layout_constraintEnd_toEndOf="@+id/endGl"
+                    app:layout_constraintStart_toStartOf="@+id/beginGl"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/nameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:fontFamily="@font/semi_bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintEnd_toEndOf="@+id/profileIv"
+                    app:layout_constraintStart_toStartOf="@+id/profileIv"
+                    app:layout_constraintTop_toBottomOf="@+id/profileIv"
+                    tools:text="@string/place_holder_small" />
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/cardsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:background="@color/ash6"
+                    app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+
+                <TextView
+                    android:id="@+id/employeeIdTextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/regular"
+                    android:text="Employee Id"
+                    android:textColor="@color/black72"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardsView" />
+
+                <TextView
+                    android:id="@+id/employeeIdTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/employeeIdTextTv"
+                    tools:text="Employee Id" />
+
+                <TextView
+                    android:id="@+id/mobileNoTextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/regular"
+                    android:text="Primary Mobile No"
+                    android:textColor="@color/black72"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/employeeIdTv" />
+
+                <TextView
+                    android:id="@+id/mobileNoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mobileNoTextTv"
+                    tools:text="Employee Id" />
+
+                <TextView
+                    android:id="@+id/sMobileNoTextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/regular"
+                    android:text="Secondary Mobile No"
+                    android:textColor="@color/black72"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mobileNoTv" />
+
+                <TextView
+                    android:id="@+id/sMobileNoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sMobileNoTextTv"
+                    tools:text="Employee Id" />
+
+                <TextView
+                    android:id="@+id/emailTextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/regular"
+                    android:text="Email Id"
+                    android:textColor="@color/black72"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sMobileNoTv" />
+
+                <TextView
+                    android:id="@+id/emailNoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/emailTextTv"
+                    tools:text="Employee Id" />
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/personalInfoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:background="@color/ash6"
+                    app:layout_constraintTop_toBottomOf="@+id/emailNoTv" />
+
+
+                <TextView
+                    android:id="@+id/rolesTextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/regular"
+                    android:text="Assigned Roles"
+                    android:textColor="@color/black72"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/personalInfoView" />
+
+                <TextView
+                    android:id="@+id/rolesTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rolesTextTv" />
+
+                <TextView
+                    android:id="@+id/reportingManagerTextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/regular"
+                    android:text="Your Reporting Manager"
+                    android:textColor="@color/black72"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rolesTv" />
+
+                <TextView
+                    android:id="@+id/reportingManagerTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reportingManagerTextTv" />
+
+                <TextView
+                    android:id="@+id/costCenterTextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/regular"
+                    android:text="Cost Center"
+                    android:textColor="@color/black72"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reportingManagerTv" />
+
+                <TextView
+                    android:id="@+id/costCenterTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/costCenterTextTv" />
+
+                <TextView
+                    android:id="@+id/projectTextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/regular"
+                    android:text="Project"
+                    android:textColor="@color/black72"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/costCenterTv" />
+
+                <TextView
+                    android:id="@+id/projectTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/projectTextTv" />
+
+                <TextView
+                    android:id="@+id/gradeTextTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:fontFamily="@font/regular"
+                    android:text="Grade and Designation"
+                    android:textColor="@color/black72"
+                    android:textSize="@dimen/sp14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/projectTv" />
+
+                <TextView
+                    android:id="@+id/gradeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gradeTextTv" />
+
+                <TextView
+                    android:id="@+id/deleteAccountTv"
+                    style="@style/RedOrangeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp50"
+                    android:paddingStart="@dimen/dp40"
+                    android:paddingEnd="@dimen/dp40"
+                    android:text="@string/delete_account"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gradeTv" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/nonAgentDataGp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:constraint_referenced_ids="sMobileNoTextTv,sMobileNoTv,reportingManagerTextTv, reportingManagerTv,gradeTextTv,gradeTv,projectTextTv,projectTv,costCenterTextTv,costCenterTv" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp100"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deleteAccountTv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

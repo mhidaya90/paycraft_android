@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ems.SuccessActivity">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+        <LinearLayout
+            android:id="@+id/contentLl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/doneTv"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout">
+
+            <ImageView
+                android:id="@+id/successIv"
+                android:layout_width="@dimen/dp100"
+                android:layout_height="@dimen/dp100"
+                android:layout_marginTop="@dimen/dp20"
+                android:src="@drawable/ic_transaction_selected"
+                app:layout_constraintBottom_toTopOf="@+id/successSmallMsgTv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/midGl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+            <TextView
+                android:id="@+id/successSmallMsgTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:fontFamily="@font/semi_bold"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/sp18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/midGl"
+                tools:text="@string/msg_short_pin_change" />
+
+
+            <TextView
+                android:id="@+id/successMsgTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp50"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp50"
+                android:fontFamily="@font/regular"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/successSmallMsgTv"
+                tools:text="@string/msg_pin_chaged" />
+
+            <TextView
+                android:id="@+id/infoMsgTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp50"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_marginEnd="@dimen/dp50"
+                android:background="@drawable/bg_rounded_primery"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/regular"
+                android:padding="@dimen/dp8"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/sp12"
+                app:drawableStartCompat="@drawable/ic_policy_violation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/successSmallMsgTv"
+                tools:text="@string/msg_pin_chaged" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/doneTv"
+            style="@style/OrangeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp40"
+            android:layout_marginEnd="@dimen/dp40"
+            android:layout_marginBottom="@dimen/dp40"
+            android:text="Done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

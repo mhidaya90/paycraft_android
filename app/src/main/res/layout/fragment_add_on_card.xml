@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/beneficiaryRelationshipTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp16"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawablePadding="@dimen/dp20"
+        android:fontFamily="@font/semi_bold"
+        android:text="Beneficiary Relationship"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/beneficiaryRelationshipEt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginStart="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp4"
+        android:layout_marginEnd="@dimen/dp10"
+        android:backgroundTint="@color/ash1"
+        android:fontFamily="@font/semi_bold"
+        android:gravity="center_vertical"
+        android:hint="Enter Beneficiary Relationship"
+        android:paddingStart="@dimen/dp10"
+        android:paddingBottom="@dimen/dp20"
+        android:singleLine="true"
+        android:textColor="@color/black33"
+        android:textColorHint="@color/black45"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beneficiaryRelationshipTv" />
+
+    <TextView
+        android:id="@+id/beneficiaryNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp16"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawablePadding="@dimen/dp20"
+        android:fontFamily="@font/semi_bold"
+        android:text="Beneficiary Name"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beneficiaryRelationshipEt" />
+
+    <EditText
+        android:id="@+id/beneficiaryNameEt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginStart="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp4"
+        android:layout_marginEnd="@dimen/dp10"
+        android:backgroundTint="@color/ash1"
+        android:fontFamily="@font/semi_bold"
+        android:gravity="center_vertical"
+        android:hint="Enter Beneficiary Name"
+        android:paddingStart="@dimen/dp10"
+        android:paddingBottom="@dimen/dp20"
+        android:singleLine="true"
+        android:textColor="@color/black33"
+        android:textColorHint="@color/black45"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beneficiaryNameTv" />
+
+
+    <TextView
+        android:id="@+id/beneficiaryMobileNoNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp16"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawablePadding="@dimen/dp20"
+        android:fontFamily="@font/semi_bold"
+        android:text="Beneficiary Mobile No"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beneficiaryNameEt" />
+
+    <EditText
+        android:id="@+id/beneficiaryMobileNoNameEt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp60"
+        android:layout_marginStart="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp4"
+        android:layout_marginEnd="@dimen/dp10"
+        android:backgroundTint="@color/ash1"
+        android:fontFamily="@font/semi_bold"
+        android:gravity="center_vertical"
+        android:hint="Select Beneficiary Mobile No"
+        android:inputType="phone"
+        android:paddingStart="@dimen/dp10"
+        android:paddingBottom="@dimen/dp20"
+        android:singleLine="true"
+        android:textColor="@color/black33"
+        android:textColorHint="@color/black45"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/beneficiaryMobileNoNameTv" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/cancelTv"
+            style="@style/AshButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel_transaction" />
+
+        <TextView
+            android:id="@+id/saveTv"
+            style="@style/OrangeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_weight="1"
+            android:text="Continue" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

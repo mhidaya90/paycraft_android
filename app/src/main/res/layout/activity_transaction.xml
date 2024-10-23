@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/report_footer_ic"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar_card_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:fitsSystemWindows="true"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:titleEnabled="false"
+                    app:toolbarId="@+id/toolbar">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/colorPrimary"
+                        android:paddingTop="60dp"
+                        android:paddingBottom="60dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/header_cont"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp20"
+                            android:layout_marginEnd="@dimen/dp20"
+                            app:cardBackgroundColor="@color/cyan1"
+                            app:cardCornerRadius="@dimen/dp12"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dp27">
+
+                                <TextView
+                                    android:id="@+id/expenseIdTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/bold"
+                                    android:text="Transaction ID : "
+                                    android:textColor="@color/black72"
+                                    android:textSize="@dimen/sp16"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/expenseIdValueTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/bold"
+                                    android:textColor="@color/black72"
+                                    android:textSize="@dimen/sp16"
+                                    app:layout_constraintBottom_toBottomOf="@+id/expenseIdTv"
+                                    app:layout_constraintStart_toEndOf="@+id/expenseIdTv"
+                                    app:layout_constraintTop_toTopOf="@+id/expenseIdTv" />
+
+                                <TextView
+                                    android:id="@+id/transactionTitleTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/bold"
+                                    android:textColor="@color/black33"
+                                    android:textSize="@dimen/sp22"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/expenseIdTv"
+                                    tools:text="November Report" />
+
+                                <TextView
+                                    android:id="@+id/amountTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp4"
+                                    android:fontFamily="@font/bold"
+                                    android:textColor="@color/black33"
+                                    android:textSize="@dimen/sp20"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/transactionTitleTv"
+                                    tools:text="Rs. 9,280.00" />
+
+
+                                <TextView
+                                    android:id="@+id/startEndDateTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp4"
+                                    android:fontFamily="@font/regular"
+                                    android:textColor="@color/black33"
+                                    android:textSize="@dimen/sp13"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/amountTv"
+                                    tools:text="01/11/2018 - 30/11/2018" />
+
+                                <View
+                                    android:id="@+id/expenseIndicatorView"
+                                    android:layout_width="@dimen/dp8"
+                                    android:layout_height="@dimen/dp8"
+                                    android:layout_marginStart="@dimen/dp5"
+                                    android:layout_marginEnd="@dimen/dp5"
+                                    android:background="@drawable/bg_circle"
+                                    app:layout_constraintBottom_toBottomOf="@+id/transactionStatusTv"
+                                    app:layout_constraintEnd_toStartOf="@+id/transactionStatusTv"
+                                    app:layout_constraintTop_toTopOf="@+id/transactionStatusTv" />
+
+                                <TextView
+                                    android:id="@+id/transactionStatusTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp32"
+                                    android:fontFamily="@font/semi_bold"
+                                    android:textColor="@color/black33"
+                                    android:textSize="@dimen/sp14"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/startEndDateTv"
+                                    tools:text="Un-submitted" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/policyViolationsViolationsTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp15"
+                            android:background="@color/colorFulvous"
+                            android:drawablePadding="@dimen/dp8"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="center_vertical"
+                            android:paddingStart="@dimen/dp47"
+                            android:paddingTop="@dimen/dp10"
+                            android:paddingBottom="@dimen/dp10"
+                            android:text="Policy Violations"
+                            android:textColor="@color/black33"
+                            android:textSize="@dimen/sp14"
+                            app:drawableStartCompat="@drawable/ic_policy_violation"
+                            app:layout_constraintTop_toBottomOf="@+id/header_cont" />
+
+                        <TextView
+                            android:id="@+id/viewViolationsTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_marginEnd="@dimen/dp12"
+                            android:fontFamily="@font/bold"
+                            android:gravity="center_vertical"
+                            android:paddingStart="@dimen/dp10"
+                            android:paddingEnd="@dimen/dp10"
+                            android:text="View"
+                            android:textColor="@color/black33"
+                            app:layout_constraintBottom_toBottomOf="@+id/policyViolationsViolationsTv"
+                            app:layout_constraintEnd_toEndOf="@+id/policyViolationsViolationsTv"
+                            app:layout_constraintTop_toTopOf="@+id/policyViolationsViolationsTv" />
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/policyViolationsGp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="policyViolationsViolationsTv,viewViolationsTv" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/reportTabs"
+                        style="@style/AppTabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="@dimen/dp20"
+                        android:layout_marginEnd="@dimen/dp20"
+                        app:layout_collapseMode="pin"
+                        app:tabGravity="fill"
+                        app:tabMaxWidth="0dp"
+                        app:tabMode="scrollable" />
+
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginBottom="48dp"
+                        android:background="@color/white"
+                        android:elevation="0dp"
+                        app:layout_collapseMode="pin">
+
+                        <TextView
+                            android:id="@+id/toolbarTitleTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/regular"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            tools:text="@string/app_name" />
+
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/reportVp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/proceed_tv"
+                android:background="@color/white"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintBottom_toTopOf="@+id/proceed_tv" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:id="@+id/report_footer_ic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp20"
+            android:weightSum="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <ImageView
+                android:id="@+id/moreIv"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:background="@drawable/bg_ash_button"
+                android:padding="@dimen/dp5"
+                android:src="@drawable/ic_baseline_more_horiz_24" />
+
+            <TextView
+                android:id="@+id/editTv"
+                style="@style/AshButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/transaction_edit"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/addToReportTv"
+                style="@style/OrangeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/add_to_report"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/changeReportTv"
+                style="@style/OrangeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/change_report"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/raiseDisputeTv"
+                style="@style/OrangeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Raise a Dispute"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

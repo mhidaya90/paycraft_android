@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20">
+
+            <ImageView
+                android:id="@+id/changePinIconIv"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp20"
+                android:src="@drawable/ic_profile_place_holder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/changePosPinTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:drawablePadding="@dimen/dp10"
+                android:fontFamily="@font/bold"
+                android:text="SET/Change PIN"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintEnd_toStartOf="@+id/changePosPinActionTv"
+                app:layout_constraintStart_toEndOf="@+id/changePinIconIv"
+                app:layout_constraintTop_toTopOf="@+id/changePinIconIv" />
+
+            <TextView
+                android:id="@+id/changePosPinTextTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4"
+                android:fontFamily="@font/regular"
+                android:text="Change the pin if you forget"
+                android:textColor="@color/black40"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toStartOf="@+id/changePosPinActionTv"
+                app:layout_constraintStart_toStartOf="@+id/changePosPinTv"
+                app:layout_constraintTop_toBottomOf="@+id/changePosPinTv" />
+
+            <TextView
+                android:id="@+id/changePosPinActionTv"
+                style="@style/OrangeButton"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:text="Change"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@color/ash1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/changePosPinTextTv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/blockCardCl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20">
+
+            <ImageView
+                android:id="@+id/blockCardIconIv"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp20"
+                android:src="@drawable/ic_profile_place_holder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/blockCardTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:drawablePadding="@dimen/dp10"
+                android:fontFamily="@font/bold"
+                android:text="Block Card"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintEnd_toStartOf="@+id/blockCardBtn"
+                app:layout_constraintStart_toEndOf="@+id/blockCardIconIv"
+                app:layout_constraintTop_toTopOf="@+id/blockCardIconIv" />
+
+            <TextView
+                android:id="@+id/blockCardTextTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4"
+                android:fontFamily="@font/regular"
+                android:text="Block the card in case if you lost"
+                android:textColor="@color/black40"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintEnd_toStartOf="@+id/blockCardBtn"
+                app:layout_constraintStart_toStartOf="@+id/blockCardTv"
+                app:layout_constraintTop_toBottomOf="@+id/blockCardTv" />
+
+            <TextView
+                android:id="@+id/blockCardBtn"
+                style="@style/OrangeButton"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:text="Block Card"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@color/ash1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blockCardTextTv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/onlineTransactionsIconIv"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp20"
+                android:src="@drawable/ic_profile_place_holder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/onlineTransactionsTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:drawablePadding="@dimen/dp10"
+                android:fontFamily="@font/bold"
+                android:text="Online Transactions"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintStart_toEndOf="@+id/onlineTransactionsIconIv"
+                app:layout_constraintTop_toTopOf="@+id/onlineTransactionsIconIv" />
+
+            <TextView
+                android:id="@+id/onlineTransactionsTextTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4"
+                android:fontFamily="@font/regular"
+                android:text="Enable Online transactions"
+                android:textColor="@color/black40"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintStart_toStartOf="@+id/onlineTransactionsTv"
+                app:layout_constraintTop_toBottomOf="@+id/onlineTransactionsTv" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@color/ash1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/onlineTransactionsTextTv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/atmWithdrawalIconIv"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp20"
+                android:src="@drawable/ic_profile_place_holder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/atmWithdrawalTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:drawablePadding="@dimen/dp10"
+                android:fontFamily="@font/bold"
+                android:text="ATM withdrawal"
+                android:textColor="@color/black33"
+                android:textSize="@dimen/sp16"
+                app:layout_constraintStart_toEndOf="@+id/atmWithdrawalIconIv"
+                app:layout_constraintTop_toTopOf="@+id/atmWithdrawalIconIv" />
+
+            <TextView
+                android:id="@+id/atmWithdrawalTextTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp4"
+                android:fontFamily="@font/regular"
+                android:text="Enable ATM withdrawal"
+                android:textColor="@color/black40"
+                android:textSize="@dimen/sp14"
+                app:layout_constraintStart_toStartOf="@+id/atmWithdrawalTv"
+                app:layout_constraintTop_toBottomOf="@+id/atmWithdrawalTv" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@color/ash1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/atmWithdrawalTextTv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp20"
+            android:fontFamily="@font/bold"
+            android:text="@string/add_dispute"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp16" />
+
+        <EditText
+            android:id="@+id/commentEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/regular"
+            android:gravity="top"
+            android:hint="@string/add_your_dispute_here"
+            android:minLines="5"
+            android:padding="@dimen/dp5"
+            android:textColor="@color/black33"
+            android:textColorHint="@color/ash2"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/commentView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp40"
+            android:background="@color/ash1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/commentEt" />
+
+        <TextView
+            android:id="@+id/submitCommentTv"
+            style="@style/OrangeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp50"
+            android:layout_marginEnd="@dimen/dp40"
+            android:text="@string/submit_comment"
+            app:layout_constraintTop_toBottomOf="@+id/commentView" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp50" />
+    </LinearLayout>
+</layout>

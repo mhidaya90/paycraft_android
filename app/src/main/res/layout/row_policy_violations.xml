@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="v"
+            type="com.paycraft.ems.reports.detail.DisplayViolation" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp10"
+        android:paddingTop="@dimen/dp8"
+        android:paddingEnd="@dimen/dp10">
+
+        <TextView
+            android:id="@+id/countTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:violationTextColor="@{v.isBlocked()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1. " />
+
+        <TextView
+            android:id="@+id/numberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4"
+            android:fontFamily="@font/semi_bold"
+            android:text="@{v.number}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            android:violationTextColor="@{v.isBlocked()}"
+            app:layout_constraintBottom_toBottomOf="@+id/countTv"
+            app:layout_constraintStart_toEndOf="@+id/countTv"
+            app:layout_constraintTop_toTopOf="@+id/countTv"
+            tools:text="EXP123" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:text=" - "
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            android:violationTextColor="@{v.isBlocked()}"
+            app:layout_constraintBottom_toBottomOf="@+id/countTv"
+            app:layout_constraintStart_toEndOf="@+id/numberTv"
+            app:layout_constraintTop_toTopOf="@+id/countTv" />
+
+        <TextView
+            android:id="@+id/policyTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp2"
+            android:fontFamily="@font/regular"
+            android:text="@{v.error}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            android:violationTextColor="@{v.isBlocked()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/numberTv"
+            app:layout_constraintTop_toBottomOf="@+id/numberTv"
+            tools:text="This is point one.This is point one.This is point one.This is point one.This is point one." />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

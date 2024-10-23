@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ems.trip.create.CreateTripAdditionalActivity">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/flightReservationLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:visibility="visible">
+
+                    <RadioGroup
+                        android:id="@+id/tripTypeTg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/oneWayRb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="One Way"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp14" />
+
+                        <RadioButton
+                            android:id="@+id/roundTripRb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="Round Trip"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp14" />
+
+                        <RadioButton
+                            android:id="@+id/multiCityRb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="Multicity"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp14" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/multiCityLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <TextView
+                        android:id="@+id/addNextCityTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+                        android:drawablePadding="@dimen/dp15"
+                        android:fontFamily="@font/semi_bold"
+                        android:text="Add another Item"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/sp16"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp16"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_profile_place_holder"
+                        android:drawablePadding="@dimen/dp15"
+                        android:fontFamily="@font/semi_bold"
+                        android:text="Time Preference"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/sp16" />
+
+                    <EditText
+                        android:id="@+id/timePreferenceEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginStart="@dimen/dp35"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_right_arrow"
+                        android:focusable="false"
+                        android:fontFamily="@font/semi_bold"
+                        android:hint="Time Preference"
+                        android:singleLine="true"
+                        android:textColor="@color/black33"
+                        android:textColorHint="@color/black45"
+                        android:textSize="@dimen/sp16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:layout_marginStart="@dimen/dp28"
+                        android:background="@color/ash" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_profile_place_holder"
+                        android:drawablePadding="@dimen/dp15"
+                        android:fontFamily="@font/semi_bold"
+                        android:text="Meal Preference"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/sp16" />
+
+                    <EditText
+                        android:id="@+id/mealPreferenceEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginStart="@dimen/dp35"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_right_arrow"
+                        android:focusable="false"
+                        android:fontFamily="@font/semi_bold"
+                        android:hint="Meal Preference"
+                        android:singleLine="true"
+                        android:textColor="@color/black33"
+                        android:textColorHint="@color/black45"
+                        android:textSize="@dimen/sp16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:layout_marginStart="@dimen/dp28"
+                        android:background="@color/ash" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_profile_place_holder"
+                        android:drawablePadding="@dimen/dp15"
+                        android:fontFamily="@font/semi_bold"
+                        android:text="Seat Preference"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/sp16" />
+
+                    <EditText
+                        android:id="@+id/seatPreferenceEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginStart="@dimen/dp35"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_right_arrow"
+                        android:focusable="false"
+                        android:fontFamily="@font/semi_bold"
+                        android:hint="Seat Preference"
+                        android:singleLine="true"
+                        android:textColor="@color/black33"
+                        android:textColorHint="@color/black45"
+                        android:textSize="@dimen/sp16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:layout_marginStart="@dimen/dp28"
+                        android:background="@color/ash" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp16"
+                        android:drawableStart="@drawable/ic_profile_place_holder"
+                        android:drawablePadding="@dimen/dp15"
+                        android:fontFamily="@font/semi_bold"
+                        android:text="Description"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/sp16" />
+
+                    <EditText
+                        android:id="@+id/descriptionEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginStart="@dimen/dp35"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/semi_bold"
+                        android:hint="Description"
+                        android:singleLine="true"
+                        android:textColor="@color/black33"
+                        android:textColorHint="@color/black45"
+                        android:textSize="@dimen/sp16" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:layout_marginStart="@dimen/dp28"
+                        android:background="@color/ash" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hotelLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/addHotelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+                    android:drawablePadding="@dimen/dp15"
+                    android:fontFamily="@font/semi_bold"
+                    android:text="Add another Item"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/sp16"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/cabLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/addCarTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+                    android:drawablePadding="@dimen/dp15"
+                    android:fontFamily="@font/semi_bold"
+                    android:text="Add another Item"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/sp16"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/othersLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/addOtherTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+                    android:drawablePadding="@dimen/dp15"
+                    android:fontFamily="@font/semi_bold"
+                    android:text="Add another Item"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/sp16"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/report_footer_ic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/editTv"
+                style="@style/AshButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/moreIv"
+                app:layout_constraintEnd_toStartOf="@+id/submitTv"
+                app:layout_constraintStart_toEndOf="@+id/moreIv" />
+
+            <TextView
+                android:id="@+id/submitTv"
+                style="@style/OrangeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginEnd="@dimen/dp20"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/trip_done"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/editTv" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

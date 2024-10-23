@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp20"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fieldNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/fieldValueTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/black45"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+</layout>

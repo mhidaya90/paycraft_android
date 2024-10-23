@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ems.AttachmentsViewerActivity">
+
+        <include layout="@layout/layout_guidelines" />
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/imagesVp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            app:layout_constraintBottom_toTopOf="@+id/indiacatorTabLayout"
+            app:layout_constraintEnd_toEndOf="@+id/endGl"
+            app:layout_constraintStart_toStartOf="@+id/beginGl"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_layout" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/indiacatorTabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp20"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/addImageIv"
+            app:layout_constraintEnd_toEndOf="@+id/endGl"
+            app:layout_constraintStart_toStartOf="@+id/beginGl"
+            app:layout_constraintTop_toBottomOf="@+id/imagesVp"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="0dp"
+            app:tabMaxWidth="0dp"
+            app:tabMode="fixed" />
+
+
+        <ImageView
+            android:id="@+id/addImageIv"
+            android:layout_width="@dimen/dp55"
+            android:layout_height="@dimen/dp55"
+            android:layout_marginBottom="@dimen/dp60"
+            android:background="@drawable/bg_circle_cyan"
+            app:layout_constraintBottom_toTopOf="@+id/doneTv"
+            app:layout_constraintEnd_toStartOf="@+id/retakeIv"
+            app:layout_constraintStart_toStartOf="@+id/beginGl" />
+
+        <TextView
+            android:id="@+id/addImageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp12"
+            android:fontFamily="@font/semi_bold"
+            android:text="Capture/ Select"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toEndOf="@+id/addImageIv"
+            app:layout_constraintStart_toStartOf="@+id/addImageIv"
+            app:layout_constraintTop_toBottomOf="@+id/addImageIv" />
+
+        <ImageView
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:clickable="false"
+            android:src="@drawable/ic_profile_place_holder"
+            app:layout_constraintBottom_toBottomOf="@+id/addImageIv"
+            app:layout_constraintEnd_toEndOf="@+id/addImageIv"
+            app:layout_constraintStart_toStartOf="@+id/addImageIv"
+            app:layout_constraintTop_toTopOf="@+id/addImageIv" />
+
+        <ImageView
+            android:id="@+id/retakeIv"
+            android:layout_width="@dimen/dp55"
+            android:layout_height="@dimen/dp55"
+            android:background="@drawable/bg_circle_cyan"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/addImageIv"
+            app:layout_constraintEnd_toStartOf="@+id/adjustIv"
+            app:layout_constraintStart_toEndOf="@+id/addImageIv"
+            app:layout_constraintTop_toTopOf="@+id/addImageIv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp12"
+            android:fontFamily="@font/semi_bold"
+            android:text="@string/retake"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/retakeIv"
+            app:layout_constraintStart_toStartOf="@+id/retakeIv"
+            app:layout_constraintTop_toBottomOf="@+id/retakeIv" />
+
+        <ImageView
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:clickable="false"
+            android:src="@drawable/ic_profile_place_holder"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/retakeIv"
+            app:layout_constraintEnd_toEndOf="@+id/retakeIv"
+            app:layout_constraintStart_toStartOf="@+id/retakeIv"
+            app:layout_constraintTop_toTopOf="@+id/retakeIv" />
+
+        <ImageView
+            android:id="@+id/adjustIv"
+            android:layout_width="@dimen/dp55"
+            android:layout_height="@dimen/dp55"
+            android:background="@drawable/bg_circle_cyan"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/addImageIv"
+            app:layout_constraintEnd_toEndOf="@+id/endGl"
+            app:layout_constraintStart_toEndOf="@+id/retakeIv"
+            app:layout_constraintTop_toTopOf="@+id/addImageIv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp12"
+            android:fontFamily="@font/semi_bold"
+            android:text="@string/adjest"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/adjustIv"
+            app:layout_constraintStart_toStartOf="@+id/adjustIv"
+            app:layout_constraintTop_toBottomOf="@+id/adjustIv" />
+
+        <ImageView
+            android:layout_width="@dimen/dp25"
+            android:layout_height="@dimen/dp25"
+            android:clickable="false"
+            android:src="@drawable/ic_profile_place_holder"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/adjustIv"
+            app:layout_constraintEnd_toEndOf="@+id/adjustIv"
+            app:layout_constraintStart_toStartOf="@+id/adjustIv"
+            app:layout_constraintTop_toTopOf="@+id/adjustIv" />
+
+        <TextView
+            android:id="@+id/doneTv"
+            style="@style/OrangeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp20"
+            android:text="@string/done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/endGl"
+            app:layout_constraintStart_toStartOf="@+id/beginGl" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/topUpTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp20"
+            android:fontFamily="@font/bold"
+            android:text="@string/top_up"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/topUpDismissIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp20"
+            android:src="@drawable/ic_close_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/topUpTitleTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/topUpTitleTv" />
+
+        <TextView
+            android:id="@+id/topUpAmountTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp40"
+            android:layout_marginEnd="@dimen/dp20"
+            android:fontFamily="@font/regular"
+            android:text="Top Up Amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topUpTitleTv" />
+
+        <TextView
+            android:id="@+id/rupeeSymbalTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:text="@string/rupee"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp26"
+            app:layout_constraintBottom_toBottomOf="@+id/topUpAmountEt"
+            app:layout_constraintEnd_toStartOf="@+id/topUpAmountEt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/topUpAmountEt" />
+
+        <EditText
+            android:id="@+id/topUpAmountEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/bold"
+            android:gravity="top"
+            android:hint="@string/enter_amount"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:padding="@dimen/dp5"
+            android:textColor="@color/black33"
+            android:textColorHint="@color/ash2"
+            android:textSize="@dimen/sp26"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rupeeSymbalTv"
+            app:layout_constraintTop_toBottomOf="@+id/topUpAmountTv" />
+
+        <View
+            android:id="@+id/topUpAmountView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@color/ash1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topUpAmountEt" />
+
+
+        <TextView
+            android:id="@+id/addThroughTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp40"
+            android:layout_marginEnd="@dimen/dp20"
+            android:fontFamily="@font/regular"
+            android:text="Add through"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topUpAmountView" />
+
+        <TextView
+            android:id="@+id/airpayCb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp20"
+            android:drawableEnd="@drawable/ic_transaction_selected"
+            android:drawablePadding="@dimen/dp10"
+            android:fontFamily="@font/bold"
+            android:text="Airpay"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/addThroughTv"
+            app:layout_constraintTop_toBottomOf="@+id/addThroughTv" />
+
+
+        <View
+            android:id="@+id/airpayView"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@color/ash1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/airpayCb" />
+
+        <CheckBox
+            android:id="@+id/termsAndConditionsCb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp100"
+            android:fontFamily="@font/regular"
+            android:text="@string/i_have_read_and_agree_to"
+            app:layout_constraintStart_toStartOf="@+id/addThroughTv"
+            app:layout_constraintTop_toBottomOf="@+id/airpayView" />
+
+        <TextView
+            android:id="@+id/termsAndConditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4"
+            android:fontFamily="@font/semi_bold"
+            android:text="@string/terms_and_conditions"
+            android:textColor="#0075E3"
+            app:layout_constraintBottom_toBottomOf="@+id/termsAndConditionsCb"
+            app:layout_constraintStart_toEndOf="@+id/termsAndConditionsCb"
+            app:layout_constraintTop_toTopOf="@+id/termsAndConditionsCb" />
+
+        <TextView
+            android:id="@+id/cancelTv"
+            style="@style/AshButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp30"
+            android:text="Cancel"
+            app:layout_constraintEnd_toStartOf="@+id/continueTv"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/termsAndConditionsCb" />
+
+        <TextView
+            android:id="@+id/continueTv"
+            style="@style/OrangeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_marginEnd="@dimen/dp20"
+            android:alpha="0.5"
+            android:enabled="false"
+            android:text="Continue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/cancelTv"
+            app:layout_constraintTop_toBottomOf="@+id/termsAndConditionsCb" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp100"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cancelTv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

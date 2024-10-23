@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:context=".home.HelpActivity">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+
+        <ImageView
+            android:id="@+id/callIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp8"
+            android:src="@drawable/baseline_call_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/callTv" />
+
+
+        <TextView
+            android:id="@+id/callTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp50"
+            android:fontFamily="@font/regular"
+            android:text="Customer care No"
+            android:textColor="@color/black87"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toEndOf="@+id/callIv"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
+
+        <TextView
+            android:id="@+id/firstCallTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:paddingTop="@dimen/dp4"
+            android:paddingBottom="@dimen/dp4"
+            android:text="+91 7400088941"
+            android:textColor="@color/black72"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="@+id/callTv"
+            app:layout_constraintTop_toBottomOf="@+id/callTv" />
+
+        <TextView
+            android:id="@+id/timingsTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp20"
+            android:fontFamily="@font/regular"
+            android:text="(Monday to Friday 10:00 AM to 06:00 PM)"
+            android:textColor="@color/black87"
+            android:textSize="@dimen/dp12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/firstCallTv"
+            app:layout_constraintTop_toBottomOf="@+id/firstCallTv" />
+
+        <TextView
+            android:id="@+id/firstSecondDifTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / "
+            app:layout_constraintBottom_toBottomOf="@+id/firstCallTv"
+            app:layout_constraintStart_toEndOf="@+id/firstCallTv"
+            app:layout_constraintTop_toTopOf="@+id/firstCallTv" />
+
+        <TextView
+            android:id="@+id/secondCallTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:paddingTop="@dimen/dp4"
+            android:paddingBottom="@dimen/dp4"
+            android:text="022-42022190"
+            android:textColor="@color/black72"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintBottom_toBottomOf="@+id/firstCallTv"
+            app:layout_constraintStart_toEndOf="@+id/firstSecondDifTv"
+            app:layout_constraintTop_toTopOf="@+id/firstCallTv" />
+
+
+        <ImageView
+            android:id="@+id/mailIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp8"
+            android:src="@drawable/baseline_email_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mailTitleTv" />
+
+        <TextView
+            android:id="@+id/mailTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:fontFamily="@font/regular"
+            android:text="Customer care Email"
+            android:textColor="@color/black87"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="@+id/callTv"
+            app:layout_constraintTop_toBottomOf="@+id/timingsTv" />
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:paddingTop="@dimen/dp4"
+            android:paddingBottom="@dimen/dp4"
+            android:text="@string/support_email"
+            android:textColor="@color/black72"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="@+id/mailTitleTv"
+            app:layout_constraintTop_toBottomOf="@+id/mailTitleTv" />
+
+
+        <ImageView
+            android:id="@+id/gMailIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp40"
+            android:layout_marginTop="@dimen/dp8"
+            android:src="@drawable/nodaloffice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/grievanceTitleTv" />
+
+        <TextView
+            android:id="@+id/grievanceTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp16"
+            android:fontFamily="@font/regular"
+            android:text="Grievance Officer Details"
+            android:textColor="@color/black87"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="@+id/callTv"
+            app:layout_constraintTop_toBottomOf="@+id/emailTv" />
+
+
+        <TextView
+            android:id="@+id/gEmailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:paddingTop="@dimen/dp4"
+            android:paddingBottom="@dimen/dp4"
+            android:text="@string/support_grievance_email"
+            android:textColor="@color/black72"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="@+id/grievanceTitleTv"
+            app:layout_constraintTop_toBottomOf="@+id/grievanceTitleTv" />
+
+        <TextView
+            android:id="@+id/gSecondCallTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:paddingTop="@dimen/dp4"
+            android:paddingBottom="@dimen/dp4"
+            android:text="022-42022190"
+            android:textColor="@color/black72"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="@+id/gEmailTv"
+            app:layout_constraintTop_toBottomOf="@+id/gEmailTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

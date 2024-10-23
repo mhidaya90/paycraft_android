@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hotelLl"
+    android:layout_width="match_parent"
+    android:padding="@dimen/dp16"
+    android:layout_marginBottom="@dimen/dp16"
+    android:background="@drawable/bg_ash_stroke"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp16"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/semi_bold"
+        android:text="Location"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <EditText
+        android:id="@+id/locationEt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginStart="@dimen/dp35"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/semi_bold"
+        android:hint="Location"
+        android:singleLine="true"
+        android:textColor="@color/black33"
+        android:textColorHint="@color/black45"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginStart="@dimen/dp28"
+        android:background="@color/ash" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp16"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/semi_bold"
+        android:text="Duration From"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <EditText
+        android:id="@+id/durationFromEt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginStart="@dimen/dp35"
+        android:layout_marginEnd="@dimen/dp20"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:focusable="false"
+        android:fontFamily="@font/semi_bold"
+        android:hint="Duration From"
+        android:singleLine="true"
+        android:textColor="@color/black33"
+        android:textColorHint="@color/black45"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginStart="@dimen/dp28"
+        android:background="@color/ash" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp16"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/semi_bold"
+        android:text="Duration To"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <EditText
+        android:id="@+id/durationToEt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginStart="@dimen/dp35"
+        android:layout_marginEnd="@dimen/dp20"
+        android:background="@android:color/transparent"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:focusable="false"
+        android:fontFamily="@font/semi_bold"
+        android:hint="Duration To"
+        android:singleLine="true"
+        android:textColor="@color/black33"
+        android:textColorHint="@color/black45"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginStart="@dimen/dp28"
+        android:background="@color/ash" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp16"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/semi_bold"
+        android:text="Description"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <EditText
+        android:id="@+id/hotelDescriptionEt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginStart="@dimen/dp35"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/semi_bold"
+        android:hint="Description"
+        android:singleLine="true"
+        android:textColor="@color/black33"
+        android:textColorHint="@color/black45"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginStart="@dimen/dp28"
+        android:background="@color/ash" />
+</LinearLayout>

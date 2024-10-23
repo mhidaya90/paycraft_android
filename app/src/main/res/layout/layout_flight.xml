@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/bg_ash_stroke"
+        android:orientation="vertical"
+        android:padding="@dimen/dp16">
+
+        <TextView
+            android:id="@+id/departureDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp16"
+            android:drawableStart="@drawable/ic_profile_place_holder"
+            android:drawablePadding="@dimen/dp15"
+            android:fontFamily="@font/semi_bold"
+            android:text="Departure Date"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/departureDateEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp35"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:focusable="false"
+            android:fontFamily="@font/semi_bold"
+            android:hint="Departure Date"
+            android:singleLine="true"
+            android:textColor="@color/black33"
+            android:textColorHint="@color/black45"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/departureDateTv" />
+
+        <View
+            android:id="@+id/departureDateView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginStart="@dimen/dp28"
+            android:background="@color/ash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/departureDateEt" />
+
+        <TextView
+            android:id="@+id/fromCityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp16"
+            android:drawableStart="@drawable/ic_profile_place_holder"
+            android:drawablePadding="@dimen/dp15"
+            android:fontFamily="@font/semi_bold"
+            android:text="From City"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/departureDateView" />
+
+
+        <EditText
+            android:id="@+id/fromCityEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp35"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/semi_bold"
+            android:hint="From City"
+            android:singleLine="true"
+            android:textColor="@color/black33"
+            android:textColorHint="@color/black45"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fromCityTv" />
+
+        <View
+            android:id="@+id/fromCityView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginStart="@dimen/dp28"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@color/ash"
+            app:layout_constraintEnd_toStartOf="@+id/upAndDownIv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fromCityEt" />
+
+        <ImageView
+            android:id="@+id/upAndDownIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp20"
+            android:src="@drawable/ic_up_and_down"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/fromCityView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fromCityView" />
+
+        <TextView
+            android:id="@+id/toCityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp16"
+            android:drawableStart="@drawable/ic_profile_place_holder"
+            android:drawablePadding="@dimen/dp15"
+            android:fontFamily="@font/semi_bold"
+            android:text="To City"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fromCityView" />
+
+        <EditText
+            android:id="@+id/toCityEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp35"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/semi_bold"
+            android:hint="To City"
+            android:singleLine="true"
+            android:textColor="@color/black33"
+            android:textColorHint="@color/black45"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toCityTv" />
+
+        <TextView
+            android:id="@+id/returnDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp16"
+            android:drawableStart="@drawable/ic_profile_place_holder"
+            android:drawablePadding="@dimen/dp15"
+            android:fontFamily="@font/semi_bold"
+            android:text="Return Date"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp16"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toCityEt"
+            tools:visibility="visible" />
+
+        <EditText
+            android:id="@+id/returnDateEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginStart="@dimen/dp35"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:focusable="false"
+            android:fontFamily="@font/semi_bold"
+            android:hint="Return Date"
+            android:singleLine="true"
+            android:textColor="@color/black33"
+            android:textColorHint="@color/black45"
+            android:textSize="@dimen/sp16"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/returnDateTv"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/returnDateView"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginStart="@dimen/dp28"
+            android:background="@color/ash"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toCityEt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

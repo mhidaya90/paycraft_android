@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_preferences"
+    app:startDestination="@id/preferencesFragment">
+
+    <fragment
+        android:id="@+id/preferencesFragment"
+        android:name="com.paycraft.card.preferences.PreferencesFragment"
+        android:label="fragment_preferences"
+        tools:layout="@layout/fragment_preferences">
+        <action
+            android:id="@+id/action_preferencesFragment_to_autoTopUpCardFragment"
+            app:destination="@id/autoTopUpCardFragment" />
+        <action
+            android:id="@+id/action_preferencesFragment_to_addOnCard"
+            app:destination="@id/addOnCard" />
+    </fragment>
+    <fragment
+        android:id="@+id/autoTopUpCardFragment"
+        android:name="com.paycraft.card.preferences.AutoTopUpCardFragment"
+        android:label="fragment_auto_top_up_card"
+        tools:layout="@layout/fragment_auto_top_up_card">
+        <action
+            android:id="@+id/action_autoTopUpCardFragment_to_paymentModeFragment"
+            app:destination="@id/paymentModeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addOnCard"
+        android:name="com.paycraft.card.preferences.AddOnCardFragment"
+        android:label="fragment_add_on_card"
+        tools:layout="@layout/fragment_add_on_card" />
+    <fragment
+        android:id="@+id/paymentModeFragment"
+        android:name="com.paycraft.card.preferences.PaymentModeFragment"
+        android:label="fragment_payment_mode"
+        tools:layout="@layout/fragment_payment_mode">
+        <argument
+            android:name="amount"
+            android:defaultValue="0"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,126 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Paycraft" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/black33</item>
+        <item name="android:textColorPrimary">@color/black33</item>
+        <item name="android:windowAnimationStyle">@style/SlidingAnimation</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="Theme.Paycraft.Dart" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/black33</item>
+        <item name="colorPrimaryVariant">@color/black33</item>
+        <item name="colorOnPrimary">@color/black33</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="background">@color/black33</item>
+        <item name="android:windowAnimationStyle">@style/SlidingAnimation</item>
+        <item name="android:statusBarColor">@color/black33</item>
+    </style>
+
+    <style name="Theme.Paycraft.Dart.Launch" parent="Theme.Paycraft.Dart">
+        <item name="android:statusBarColor">@color/black33</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="Theme.Paycraft.NoToolBar.Dark">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/SlidingAnimation</item>
+        <item name="colorPrimaryVariant">@color/black33</item>
+        <item name="android:statusBarColor">@color/black33</item>
+    </style>
+
+    <style name="Theme.Paycraft.NoToolBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/SlidingAnimation</item>
+        <item name="colorPrimaryVariant">@color/black33</item>
+    </style>
+
+    <style name="SlidingAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="OrangeButton">
+        <item name="android:background">@drawable/bg_ornage_button</item>
+        <item name="android:minHeight">@dimen/dp50</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp16</item>
+    </style>
+
+    <style name="AshButton" parent="OrangeButton">
+        <item name="android:background">@drawable/bg_ash_button</item>
+        <item name="android:textColor">@color/black33</item>
+    </style>
+
+    <style name="RedOrangeButton" parent="OrangeButton">
+        <item name="android:background">@drawable/bg_red_orange_lite_button</item>
+        <item name="android:textColor">@color/colorRedOrange</item>
+    </style>
+
+    <style name="editTextTitleWhiteText">
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp14</item>
+    </style>
+
+    <style name="BlackEditText">
+        <item name="android:background">@drawable/bg_ash_stroke_edit_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">@dimen/dp50</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:padding">@dimen/sp14</item>
+        <item name="android:drawablePadding">@dimen/dp14</item>
+        <item name="android:textColorHint">#80878787</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#262833</item>
+    </style>
+
+    <style name="SearchBlackEditText">
+        <item name="android:background">@drawable/bg_ash_stroke_edit_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:minHeight">@dimen/dp50</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:paddingStart">@dimen/sp14</item>
+        <item name="android:paddingEnd">@dimen/sp14</item>
+        <item name="android:paddingTop">@dimen/dp4</item>
+        <item name="android:paddingBottom">@dimen/dp4</item>
+        <item name="android:drawablePadding">@dimen/dp14</item>
+        <item name="android:textColorHint">#80878787</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#262833</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_dialog</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabIndicatorColor">@color/black33</item>
+        <item name="tabBackground">@color/white</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/black33</item>
+    </style>
+
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/ash2</item>
+        <item name="android:fontFamily">@font/semi_bold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+</resources>

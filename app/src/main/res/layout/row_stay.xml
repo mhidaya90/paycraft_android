@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="stay"
+            type="com.paycraft.ems.transactions.HotelReservation" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp20"
+        android:paddingTop="@dimen/dp10"
+        android:paddingEnd="@dimen/dp20"
+        android:paddingBottom="@dimen/dp10">
+
+        <ImageView
+            android:id="@+id/stayIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_profile_place_holder" />
+
+
+        <TextView
+            android:id="@+id/stayTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:text="@{stay.location}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="@+id/fromCityTv"
+            app:layout_constraintTop_toTopOf="@+id/stayIv" />
+
+        <TextView
+            android:id="@+id/fromCityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:fontFamily="@font/regular"
+            android:text="@{stay.durationFrom}"
+            android:textColor="@color/black72"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toEndOf="@+id/stayIv"
+            app:layout_constraintTop_toBottomOf="@+id/stayIv" />
+
+
+        <ImageView
+            android:id="@+id/stayToIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp4"
+            app:layout_constraintBottom_toBottomOf="@+id/fromCityTv"
+            app:layout_constraintStart_toEndOf="@+id/fromCityTv"
+            app:layout_constraintTop_toTopOf="@+id/fromCityTv"
+            app:srcCompat="@drawable/ic_journey_arrow" />
+
+        <TextView
+            android:id="@+id/toCityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:fontFamily="@font/regular"
+            android:text="@{stay.durationTo}"
+            android:textColor="@color/black72"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintBottom_toBottomOf="@+id/stayToIv"
+            app:layout_constraintStart_toEndOf="@+id/stayToIv"
+            app:layout_constraintTop_toTopOf="@+id/stayToIv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

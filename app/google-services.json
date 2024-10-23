@@ -1,0 +1,121 @@
+{
+  "project_info": {
+    "project_number": "214254533825",
+    "project_id": "paycraft22",
+    "storage_bucket": "paycraft22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214254533825:android:95767302d3f911f3e52840",
+        "android_client_info": {
+          "package_name": "com.paycraft.dhantech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214254533825-d03p9hblc9f6rjhatducgj596dbl5lce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.paycraft.dhantech",
+            "certificate_hash": "cebd8d370e46d7ff189b56994d18fb08c325c78c"
+          }
+        },
+        {
+          "client_id": "214254533825-oloubncb24bqf1o8go6kd808m3276dru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJvl-bpmCJtEKdbTh1qSi8ipGmwzExvPc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214254533825-oloubncb24bqf1o8go6kd808m3276dru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214254533825:android:4f760c9ad36038f9e52840",
+        "android_client_info": {
+          "package_name": "com.paycraft.dhantech.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214254533825-ct327po0nsjqenkqtitq3qrca5kmjrsk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.paycraft.dhantech.dev",
+            "certificate_hash": "cebd8d370e46d7ff189b56994d18fb08c325c78c"
+          }
+        },
+        {
+          "client_id": "214254533825-oloubncb24bqf1o8go6kd808m3276dru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJvl-bpmCJtEKdbTh1qSi8ipGmwzExvPc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214254533825-oloubncb24bqf1o8go6kd808m3276dru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214254533825:android:d5c622769784b4bae52840",
+        "android_client_info": {
+          "package_name": "com.paycraft.dhantech.loc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214254533825-lgrbpeva0dk22jbg35sh2vmbl05hpd5q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.paycraft.dhantech.loc",
+            "certificate_hash": "cebd8d370e46d7ff189b56994d18fb08c325c78c"
+          }
+        },
+        {
+          "client_id": "214254533825-oloubncb24bqf1o8go6kd808m3276dru.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJvl-bpmCJtEKdbTh1qSi8ipGmwzExvPc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214254533825-oloubncb24bqf1o8go6kd808m3276dru.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

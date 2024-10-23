@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/flightReservationTextTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:fontFamily="@font/semi_bold"
+                android:text="Flight Reservation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/flightReservationRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/row_journey" />
+
+            <TextView
+                android:id="@+id/hotelReservationTextTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
+                android:fontFamily="@font/semi_bold"
+                android:text="Hotel Reservation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hotelReservationRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/row_stay" />
+
+            <TextView
+                android:id="@+id/cabReservationTextTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
+                android:fontFamily="@font/semi_bold"
+                android:text="Cab Reservation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/carReservationRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/row_journey" />
+
+            <TextView
+                android:id="@+id/otherReservationTextTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
+                android:fontFamily="@font/semi_bold"
+                android:text="Other Reservation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/otherReservationRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/row_journey" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

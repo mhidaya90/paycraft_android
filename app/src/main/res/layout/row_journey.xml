@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="journey"
+            type="com.paycraft.ems.transactions.Journey" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp20"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10">
+
+        <ImageView
+            android:id="@+id/journeyIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_profile_place_holder" />
+
+        <TextView
+            android:id="@+id/fromCityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:fontFamily="@font/semi_bold"
+            android:text="@{journey.fromCity}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toEndOf="@+id/journeyIv"
+            app:layout_constraintTop_toTopOf="@+id/journeyIv" />
+
+
+        <ImageView
+            android:id="@+id/journeyToIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            app:layout_constraintBottom_toBottomOf="@+id/fromCityTv"
+            app:layout_constraintStart_toEndOf="@+id/fromCityTv"
+            app:layout_constraintTop_toTopOf="@+id/fromCityTv"
+            app:srcCompat="@drawable/ic_journey_arrow" />
+
+        <TextView
+            android:id="@+id/toCityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:fontFamily="@font/semi_bold"
+            android:text="@{journey.toCity}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintBottom_toBottomOf="@+id/journeyToIv"
+            app:layout_constraintStart_toEndOf="@+id/journeyToIv"
+            app:layout_constraintTop_toTopOf="@+id/journeyToIv" />
+
+        <TextView
+            android:id="@+id/journeyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4"
+            android:fontFamily="@font/regular"
+            android:text="@{journey.depatureDate}"
+            android:textColor="@color/black72"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="@+id/fromCityTv"
+            app:layout_constraintTop_toBottomOf="@+id/fromCityTv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

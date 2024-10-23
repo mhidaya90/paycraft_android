@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/dp20">
+
+        <TextView
+            android:id="@+id/amountInfoTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp20"
+            android:fontFamily="@font/regular"
+            android:text="@string/amount_message"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include layout="@layout/row_payment_mode_account" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp20"
+            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+            android:drawablePadding="@dimen/dp8"
+            android:fontFamily="@font/regular"
+            android:gravity="center_vertical"
+            android:text="Add another bank account"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp14" />
+
+        <include layout="@layout/row_payment_mode_card" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:drawableStart="@drawable/ic_baseline_add_circle_outline_24"
+            android:drawablePadding="@dimen/dp8"
+            android:fontFamily="@font/regular"
+            android:gravity="center_vertical"
+            android:text="Add another credit card"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp14" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/cancelTv"
+            style="@style/AshButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel_transaction" />
+
+        <TextView
+            android:id="@+id/saveTv"
+            style="@style/OrangeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_weight="1"
+            android:text="Continue" />
+    </LinearLayout>
+</LinearLayout>

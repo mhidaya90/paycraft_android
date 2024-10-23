@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_home">
+
+    <TextView
+        android:id="@+id/expenseHomeTabTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:onClick="onClick"
+        android:padding="@dimen/sp12"
+        android:text="@string/expenses"
+        android:textColor="@color/black33"
+        app:layout_constraintEnd_toStartOf="@+id/reportHomeTabTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/expenseHomeTabIndicatorTv"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp2"
+        android:background="@color/black33"
+        app:layout_constraintBottom_toBottomOf="@+id/expenseHomeTabTv"
+        app:layout_constraintEnd_toEndOf="@+id/expenseHomeTabTv"
+        app:layout_constraintStart_toStartOf="@+id/expenseHomeTabTv" />
+
+    <TextView
+        android:id="@+id/reportHomeTabTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:onClick="onClick"
+        android:padding="@dimen/sp12"
+        android:text="@string/reports"
+        android:textColor="@color/black45"
+        app:layout_constraintBottom_toBottomOf="@+id/expenseHomeTabTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/expenseHomeTabTv"
+        app:layout_constraintTop_toTopOf="@+id/expenseHomeTabTv" />
+
+    <View
+        android:id="@+id/reportHomeTabIndicatorTv"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp2"
+        app:layout_constraintBottom_toBottomOf="@+id/reportHomeTabTv"
+        app:layout_constraintEnd_toEndOf="@+id/reportHomeTabTv"
+        app:layout_constraintStart_toStartOf="@+id/reportHomeTabTv" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactionsRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/viewAllTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseHomeTabIndicatorTv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reportsRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/viewAllTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseHomeTabIndicatorTv" />
+
+    <TextView
+        android:id="@+id/viewAllTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:padding="@dimen/sp12"
+        android:text="@string/view_all"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

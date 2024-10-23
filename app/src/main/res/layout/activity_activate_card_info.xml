@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".card.add.ActivateCardInfoActivity">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:fontFamily="@font/bold"
+            android:text="Complete Card KYC"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout" />
+
+        <TextView
+            android:id="@+id/cardActivationInfoTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp20"
+            android:gravity="center_horizontal"
+            android:text="As per RBI guidelines, You need to complete your KYC to activate the card."
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleTv" />
+
+        <LinearLayout
+            android:id="@+id/infoTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@drawable/bg_azureish_white"
+            android:orientation="vertical"
+            android:padding="@dimen/dp20"
+            app:layout_constraintTop_toBottomOf="@+id/cardActivationInfoTv">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp8"
+                android:drawableStart="@drawable/activate_card_info_aadhar"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:text="Download Aadhar XML"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp8"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dp1"
+                android:text="1. Download the Aadhar XML file from the UIDAI site.\n
+2. Login and navigate to Offline KYC\n
+3. Set the Passcode and download"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:drawableStart="@drawable/activate_card_aadhar"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:text="Upload downloaded file"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp8"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dp1"
+                android:text="Navigate to bank KYC page to upload the downloaded file and enter details required for KYC."
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp16"
+                android:drawableStart="@drawable/activate_card_kyc"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/bold"
+                android:gravity="center_vertical"
+                android:text="KYC Completed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp30"
+                android:layout_marginTop="@dimen/dp8"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/regular"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dp1"
+                android:text="Post completion of KYC process, Your Card will be activated with in 24hrs."
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginEnd="@dimen/dp20"
+            android:fontFamily="@font/regular"
+            android:gravity="center_horizontal"
+            android:text="You will be redirected to the web browser for completing the KYC process."
+            android:textSize="@dimen/sp12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/infoTv" />
+
+        <TextView
+            android:id="@+id/openUrlTv"
+            style="@style/OrangeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20"
+            android:text="Open Link"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

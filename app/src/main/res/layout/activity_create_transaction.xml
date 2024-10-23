@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ems.transactions.create.CreateTransactionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/filePickerTv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/dp24"
+                        android:fontFamily="@font/semi_bold"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dp20"
+                        android:text="@string/add_receipt"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/sp16"
+                        app:drawableStartCompat="@drawable/ic_profile_place_holder" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/selectedImageLl"
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="@dimen/dp100"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:gravity="center">
+
+                        <View
+                            android:id="@+id/imagePickerBackgroundView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/ash1"
+                            android:clickable="false" />
+
+                        <ImageView
+                            android:id="@+id/pickImageIv"
+                            android:layout_width="@dimen/dp50"
+                            android:layout_height="@dimen/dp50"
+                            android:background="@color/ash1"
+                            android:src="@drawable/ic_profile_place_holder"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/selectedImageIv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clickable="false" />
+
+                        <TextView
+                            android:id="@+id/imageCountTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/black40"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="center"
+                            android:text="+1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp22" />
+
+                        <com.github.ybq.android.spinkit.SpinKitView
+                            android:id="@+id/loadingSkv"
+                            style="@style/SpinKitView.Circle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:SpinKit_Color="@color/orange"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/selectedGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="selectedImageIv,imageCountTv"
+                            tools:visibility="visible" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/amountTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:drawableStart="@drawable/ic_profile_place_holder"
+                    android:drawablePadding="@dimen/dp20"
+                    android:fontFamily="@font/semi_bold"
+                    android:text="Amount*"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/sp16" />
+
+                <EditText
+                    android:id="@+id/amountEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_marginStart="@dimen/dp45"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:backgroundTint="@color/ash1"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="center_vertical"
+                    android:hint="Enter Amount"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp20"
+                    android:singleLine="true"
+                    android:textColor="@color/black33"
+                    android:textColorHint="@color/black45"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/amountErrorInfoTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp45"
+                    android:fontFamily="@font/regular"
+                    android:paddingBottom="@dimen/dp4"
+                    android:text="Error Info"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/dateAndTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:drawableStart="@drawable/ic_profile_place_holder"
+                    android:drawablePadding="@dimen/dp20"
+                    android:fontFamily="@font/semi_bold"
+                    android:text="Date And Time*"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/sp16" />
+
+                <EditText
+                    android:id="@+id/dateAndTimeEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_marginStart="@dimen/dp45"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:backgroundTint="@color/ash1"
+                    android:drawableEnd="@drawable/ic_right_arrow"
+                    android:focusable="false"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="center_vertical"
+                    android:hint="Select Date And Time"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp20"
+                    android:singleLine="true"
+                    android:textColor="@color/black33"
+                    android:textColorHint="@color/black45"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/dateAndTimeErrorInfoTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp45"
+                    android:fontFamily="@font/regular"
+                    android:paddingBottom="@dimen/dp4"
+                    android:text="Error Info"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/merchantTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:drawableStart="@drawable/ic_profile_place_holder"
+                    android:drawablePadding="@dimen/dp20"
+                    android:fontFamily="@font/semi_bold"
+                    android:text="Merchant*"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/sp16" />
+
+                <EditText
+                    android:id="@+id/merchantEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_marginStart="@dimen/dp45"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:backgroundTint="@color/ash1"
+                    android:drawableEnd="@drawable/ic_right_arrow"
+                    android:focusable="false"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="center_vertical"
+                    android:hint="Select Merchant"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp20"
+                    android:singleLine="true"
+                    android:textColor="@color/black33"
+                    android:textColorHint="@color/black45"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/merchantErrorInfoTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp45"
+                    android:fontFamily="@font/regular"
+                    android:paddingBottom="@dimen/dp4"
+                    android:text="Error Info"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/categoryTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp16"
+                    android:drawableStart="@drawable/ic_profile_place_holder"
+                    android:drawablePadding="@dimen/dp20"
+                    android:fontFamily="@font/semi_bold"
+                    android:text="Category*"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/sp16" />
+
+                <EditText
+                    android:id="@+id/categoryEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp60"
+                    android:layout_marginStart="@dimen/dp45"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:backgroundTint="@color/ash1"
+                    android:drawableEnd="@drawable/ic_right_arrow"
+                    android:focusable="false"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="center_vertical"
+                    android:hint="Select Category"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingBottom="@dimen/dp20"
+                    android:singleLine="true"
+                    android:textColor="@color/black33"
+                    android:textColorHint="@color/black45"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/categoryErrorInfoTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp45"
+                    android:fontFamily="@font/regular"
+                    android:paddingBottom="@dimen/dp4"
+                    android:text="Error Info"
+                    android:textColor="@color/colorRed"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp15">
+
+                    <CheckBox
+                        android:id="@+id/claimCb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:drawablePadding="@dimen/dp16"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/sp16" />
+
+                    <TextView
+                        android:id="@+id/claimCbIntoTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp16"
+                        android:fontFamily="@font/regular"
+                        android:text="Claim Reimbursement"
+                        android:textColor="@color/black33"
+                        android:textSize="@dimen/sp16" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/transactionFieldsLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancelTv"
+                style="@style/AshButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cancel_transaction" />
+
+            <TextView
+                android:id="@+id/saveTv"
+                style="@style/OrangeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_weight="1"
+                android:text="@string/save_transaction" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

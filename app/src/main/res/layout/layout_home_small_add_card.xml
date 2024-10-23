@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewCardLl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp10"
+    android:gravity="center_vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/companyNameTv"
+    tools:showIn="@layout/activity_home">
+
+    <ImageView
+        android:id="@+id/cardIv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_card_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/amountTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:fontFamily="@font/black"
+        android:paddingStart="@dimen/dp10"
+        android:paddingEnd="@dimen/dp10"
+        android:text="1000"
+        android:textColor="@color/black10"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toEndOf="@+id/cardIv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/availableBalTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:fontFamily="@font/regular"
+        android:paddingStart="@dimen/dp10"
+        android:paddingEnd="@dimen/dp10"
+        android:text="Available on your card"
+        android:textColor="@color/black10"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintStart_toEndOf="@+id/cardIv"
+        app:layout_constraintTop_toBottomOf="@+id/amountTv" />
+
+
+    <TextView
+        android:id="@+id/viewCardMiniTv"
+        style="@style/OrangeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp35"
+        android:background="@drawable/bg_cyan_button"
+        android:paddingStart="@dimen/dp20"
+        android:paddingEnd="@dimen/dp20"
+        android:text="@string/view"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/iHaveCardTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_weight="1"
+        android:fontFamily="@font/bold"
+        android:paddingStart="@dimen/dp10"
+        android:paddingEnd="@dimen/dp10"
+        android:text="@string/i_have_a_paycraft_card"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintBottom_toBottomOf="@+id/cardIv"
+        app:layout_constraintStart_toEndOf="@+id/cardIv"
+        app:layout_constraintTop_toTopOf="@+id/cardIv" />
+
+    <TextView
+        android:id="@+id/addCardMiniTv"
+        style="@style/OrangeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp35"
+        android:background="@drawable/bg_cyan_button"
+        android:paddingStart="@dimen/dp20"
+        android:paddingEnd="@dimen/dp20"
+        android:text="@string/add"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/noCardGp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="addCardMiniTv,iHaveCardTv" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/yesCardGp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="viewCardMiniTv,amountTv,availableBalTv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

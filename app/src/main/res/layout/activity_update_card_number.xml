@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".card.add.verify.CardVerificationActivity">
+
+        <include layout="@layout/layout_guidelines" />
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+        <TextView
+            android:id="@+id/otpNumberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:fontFamily="@font/regular"
+            android:text="@string/update_mobile_number"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="@+id/beginGl"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_layout" />
+
+        <TextView
+            android:id="@+id/notYourNumTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="@+id/beginGl"
+            app:layout_constraintTop_toBottomOf="@+id/otpNumberTv" />
+
+        <EditText
+            android:id="@+id/mobileNumberEt"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp45"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_profile_place_holder"
+            android:drawablePadding="@dimen/dp15"
+            android:maxLength="10"
+            android:fontFamily="@font/regular"
+            android:hint="Enter Mobile Number"
+            android:inputType="phone"
+            android:textColor="@color/black33"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toEndOf="@+id/endGl"
+            app:layout_constraintStart_toStartOf="@+id/beginGl"
+            app:layout_constraintTop_toBottomOf="@+id/notYourNumTv" />
+
+        <View
+            android:id="@+id/otpView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginStart="@dimen/dp28"
+            android:background="@color/ash"
+            app:layout_constraintEnd_toEndOf="@+id/endGl"
+            app:layout_constraintStart_toStartOf="@+id/mobileNumberEt"
+            app:layout_constraintTop_toBottomOf="@+id/mobileNumberEt" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:padding="@dimen/dp20"
+            android:text="@string/resend_otp_in"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otpView" />
+
+        <TextView
+            android:id="@+id/confirmTv"
+            style="@style/OrangeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp20"
+            android:onClick="onClick"
+            android:text="@string/update"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/endGl"
+            app:layout_constraintStart_toStartOf="@+id/beginGl" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

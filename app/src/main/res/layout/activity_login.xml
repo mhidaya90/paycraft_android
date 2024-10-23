@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black33"
+        tools:context=".user.login.LoginActivity">
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/layout_toolbar" />
+
+        <include layout="@layout/layout_guidelines" />
+
+        <TextView
+            android:id="@+id/errorTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            android:padding="@dimen/dp8"
+            android:paddingStart="@dimen/dp20"
+            android:paddingEnd="@dimen/dp20"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/sp14"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
+            tools:text="Error Info"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/emailLabelTv"
+            style="@style/editTextTitleWhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="@string/email_address_or_mobile"
+            app:layout_constraintStart_toStartOf="@+id/beginGl"
+            app:layout_constraintTop_toBottomOf="@+id/errorTv" />
+
+        <EditText
+            android:id="@+id/emailEt"
+            style="@style/BlackEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:hint="@string/email_address_or_mobile"
+            app:layout_constraintEnd_toEndOf="@id/endGl"
+            app:layout_constraintStart_toStartOf="@id/beginGl"
+            app:layout_constraintTop_toBottomOf="@+id/emailLabelTv" />
+
+        <TextView
+            android:id="@+id/passwordLabelTv"
+            style="@style/editTextTitleWhiteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/password"
+            app:layout_constraintStart_toStartOf="@+id/beginGl"
+            app:layout_constraintTop_toBottomOf="@+id/emailEt" />
+
+        <EditText
+            android:id="@+id/passwordEt"
+            style="@style/BlackEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@id/endGl"
+            app:layout_constraintStart_toStartOf="@id/beginGl"
+            app:layout_constraintTop_toBottomOf="@+id/passwordLabelTv" />
+
+        <ImageView
+            android:id="@+id/passwordEye"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp5"
+            android:alpha=".5"
+            android:onClick="onClick"
+            android:padding="@dimen/dp5"
+            android:src="@drawable/hide_eye"
+            app:layout_constraintBottom_toBottomOf="@+id/passwordEt"
+            app:layout_constraintEnd_toEndOf="@+id/passwordEt"
+            app:layout_constraintTop_toTopOf="@+id/passwordEt" />
+
+        <TextView
+            android:id="@+id/forgotYourPasswordTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semi_bold"
+            android:onClick="onClick"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp10"
+            android:text="@string/forgot_your_password"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp14"
+            app:layout_constraintEnd_toEndOf="@id/passwordEt"
+            app:layout_constraintTop_toBottomOf="@+id/passwordEt" />
+
+        <TextView
+            android:id="@+id/loginTv"
+            style="@style/OrangeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp40"
+            android:onClick="onClick"
+            android:text="@string/login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/endGl"
+            app:layout_constraintStart_toStartOf="@id/beginGl" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

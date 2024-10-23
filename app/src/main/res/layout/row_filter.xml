@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="androidx.core.content.ContextCompat" />
+
+        <import type="com.paycraft.R" />
+
+        <variable
+            name="filter"
+            type="com.paycraft.ems.transactions.Filter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp8">
+
+        <TextView
+            android:id="@+id/filterTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:layout_marginEnd="@dimen/dp8"
+            android:background="@{filter.selected? @drawable/bg_orange_filter : @drawable/bg_ash_filter}"
+            android:drawableEnd="@drawable/ic_close_filter"
+            android:drawablePadding="@dimen/dp4"
+            android:fontFamily="@font/regular"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp10"
+            android:paddingTop="@dimen/dp4"
+            android:paddingEnd="@dimen/dp10"
+            android:paddingBottom="@dimen/dp4"
+            android:stateTextColor="@{filter.selected}"
+            android:tag="@{filter.status}"
+            android:text="@{filter.displayStatus}"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/bg_orange_filter"
+            tools:text="Filter"
+            tools:textColor="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

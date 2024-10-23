@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/transactionCv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/dp12"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp23">
+
+                <View
+                    android:id="@+id/indicatorView"
+                    android:layout_width="@dimen/dp4"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:background="@color/green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/topLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp23"
+                    android:layout_marginEnd="@dimen/dp23"
+                    app:layout_constraintStart_toEndOf="@+id/indicatorView"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5">
+
+                        <TextView
+                            android:id="@+id/expenseTitleTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_profile_place_holder"
+                            android:drawableEnd="@drawable/ic_debit"
+                            android:drawablePadding="@dimen/dp10"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="Karachi"
+                            android:textSize="@dimen/sp16" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end">
+
+                        <TextView
+                            android:id="@+id/expenseAmountTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/dp10"
+                            android:fontFamily="@font/semi_bold"
+                            android:gravity="end"
+                            android:text="Rs. 88888.88"
+                            android:textColor="@color/black33"
+                            android:textSize="@dimen/sp16"
+                            app:layout_constraintBottom_toBottomOf="@+id/expenseTitleTv"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/expenseTitleTv" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/expenseDateAndTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp11"
+                    android:layout_marginTop="@dimen/dp4"
+                    android:fontFamily="@font/regular"
+                    android:text="09/10/2018, 03.47 PM"
+                    android:textColor="@color/black33"
+                    android:textSize="@dimen/sp12"
+                    app:layout_constraintStart_toEndOf="@+id/indicatorView"
+                    app:layout_constraintTop_toBottomOf="@+id/topLL" />
+
+                <View
+                    android:id="@+id/cardTypeIndicatorView"
+                    android:layout_width="@dimen/dp8"
+                    android:layout_height="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:background="@drawable/bg_circle"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/expenseDateAndTimeTv"
+                    app:layout_constraintTop_toBottomOf="@+id/expenseDateAndTimeTv" />
+
+                <TextView
+                    android:id="@+id/cardTypeTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/regular"
+                    android:maxWidth="@dimen/dp100"
+                    android:maxLines="1"
+                    android:minWidth="@dimen/dp50"
+                    android:text="Credit Card Credit Card Credit Card Credit Card"
+                    android:textColor="@color/ash3"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardTypeIndicatorView"
+                    app:layout_constraintStart_toEndOf="@+id/cardTypeIndicatorView"
+                    app:layout_constraintTop_toTopOf="@+id/cardTypeIndicatorView" />
+
+                <View
+                    android:id="@+id/travelIndicatorView"
+                    android:layout_width="@dimen/dp8"
+                    android:layout_height="@dimen/dp8"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@drawable/bg_circle"
+                    app:layout_constraintStart_toStartOf="@+id/expenseDateAndTimeTv"
+                    app:layout_constraintTop_toBottomOf="@+id/expenseDateAndTimeTv" />
+
+                <TextView
+                    android:id="@+id/travelTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/regular"
+                    android:maxLines="1"
+                    android:text="Travel Travel Travel Travel Travel"
+                    android:textColor="@color/ash3"
+                    android:textSize="@dimen/sp12"
+                    app:layout_constraintBottom_toBottomOf="@+id/travelIndicatorView"
+                    app:layout_constraintEnd_toStartOf="@+id/expenseIndicatorView"
+                    app:layout_constraintStart_toEndOf="@+id/travelIndicatorView"
+                    app:layout_constraintTop_toTopOf="@+id/travelIndicatorView" />
+
+
+                <View
+                    android:id="@+id/expenseIndicatorView"
+                    android:layout_width="@dimen/dp8"
+                    android:layout_height="@dimen/dp8"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:background="@drawable/bg_circle"
+                    app:layout_constraintBottom_toBottomOf="@+id/expenseStatusTv"
+                    app:layout_constraintEnd_toStartOf="@+id/expenseStatusTv"
+                    app:layout_constraintTop_toTopOf="@+id/expenseStatusTv" />
+
+                <TextView
+                    android:id="@+id/expenseStatusTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/semi_bold"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:text="R"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/sp13"
+                    app:layout_constraintBottom_toBottomOf="@+id/travelIndicatorView"
+                    app:layout_constraintEnd_toEndOf="@+id/topLL"
+                    app:layout_constraintTop_toTopOf="@+id/travelIndicatorView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/selectionIndicatorIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dp4"
+            android:src="@drawable/ic_transaction_selected"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/transactionCv"
+            app:layout_constraintTop_toTopOf="@+id/transactionCv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

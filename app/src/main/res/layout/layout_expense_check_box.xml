@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/dp15"
+    android:paddingBottom="@dimen/dp15">
+
+    <CheckBox
+        android:id="@+id/expenseCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:drawablePadding="@dimen/dp16"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <TextView
+        android:id="@+id/expenseCbIntoTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:fontFamily="@font/regular"
+        android:text="Text"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+</LinearLayout>

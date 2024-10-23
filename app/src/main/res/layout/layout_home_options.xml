@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_home">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp25"
+        android:fontFamily="@font/regular"
+        android:text="@string/your"
+        android:textColor="@color/ash2"
+        android:textSize="@dimen/sp13" />
+
+    <TextView
+        android:id="@+id/expensesTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/medium"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/expenses"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:id="@+id/expensesView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9" />
+
+    <TextView
+        android:id="@+id/expenseReportsTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/medium"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/expense_reports"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:id="@+id/expenseReportsView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9" />
+
+
+    <TextView
+        android:id="@+id/advancesTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/medium"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/advances"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:id="@+id/advancesView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9" />
+
+    <TextView
+        android:id="@+id/tripsTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/medium"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/trips"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:id="@+id/tripsView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9" />
+
+    <TextView
+        android:id="@+id/cardsTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/medium"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/cards"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:id="@+id/cardsView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9" />
+
+    <TextView
+        android:id="@+id/personalDetailsTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/medium"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/personal_details"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:id="@+id/personalDetailsView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9" />
+
+    <TextView
+        android:id="@+id/preferenceTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/medium"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/preference"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/preferenceView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/helpSupportTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/medium"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/help_and_support"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:id="@+id/helpSupportView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9" />
+
+    <TextView
+        android:id="@+id/privacyPolicyTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/medium"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/privacy_policy"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:id="@+id/privacyPolicyView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9" />
+
+    <TextView
+        android:id="@+id/signoutTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_profile_place_holder"
+        android:drawableEnd="@drawable/ic_right_arrow"
+        android:drawablePadding="@dimen/dp15"
+        android:fontFamily="@font/medium"
+        android:onClick="onClick"
+        android:paddingTop="@dimen/dp15"
+        android:paddingBottom="@dimen/dp15"
+        android:text="@string/signout"
+        android:textColor="@color/black33"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:id="@+id/signoutView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="#F1F5F9" />
+
+    <TextView
+        android:id="@+id/versionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/semi_bold"
+        android:padding="@dimen/dp8"
+        android:textSize="@dimen/sp16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp100" />
+
+</LinearLayout>
